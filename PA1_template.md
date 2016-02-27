@@ -68,7 +68,7 @@ hist(total$steps,
      col="DodgerBlue")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)\
+![](figure/unnamed-chunk-2-1.png)
 
 ## What is the average daily activity pattern?
 
@@ -81,7 +81,7 @@ plot(averages$mean ~ averages$interval, type="l", col="blue",xlab="5-minute Inte
 title(main="Time-series Plot", col.main="red", font.main=4)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)\
+![](figure/unnamed-chunk-3-1.png)
 
 ```r
 # The 5-min interval with the max number of steps averaged over all days
@@ -149,7 +149,7 @@ hist(total.na$steps,
      col="DodgerBlue")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)\
+![](figure/unnamed-chunk-4-1.png)
 
 ```r
 # Calculate the mean of total number of steps taken per day.
@@ -197,7 +197,7 @@ averages.na <- data %>%group_by(interval, wDay) %>% summarise(mean = mean(steps)
 ggplot(averages.na, aes(interval,mean)) + geom_line(color="DodgerBlue") + facet_wrap(~wDay, nrow=2) + labs(x="Interval", y="Number of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)\
+![](figure/unnamed-chunk-5-1.png)
 
 
 
